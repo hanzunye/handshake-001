@@ -100,8 +100,8 @@
 - [x] D2. 盖时间戳：`ots stamp PREREGISTRATION.md handshake.py config.json`
 - [x] D3. **GitHub**（10-09 已推送到 https://github.com/hanzunye/handshake-001 ，Release 还没发）：在 `handshake-001` 目录下运行 `git init`，提交后推送到新建的公开仓库。`secret/`、`.venv/`、`rehearsal/` 都不会被推上去。然后发布一个 Release，名字叫 `v1.0-prereg`。
 - [x] D4. **Zenodo**（DOI 10.5281/zenodo.23269344；还需把作者和许可协议改成 Han, Yunze 和 CC0）：发布 Release 后会自动生成一个 DOI，记下来。如果 Zenodo 让你选许可协议，选 CC0 1.0。
-- [ ] D5. **YouTube**：先预约好直播（见 E2），拿到直播链接。
-- [ ] D6. **X 预注册帖**（用文字发，然后**置顶**）：
+- [x] D5. **YouTube**：先预约好直播（见 E2），拿到直播链接。
+- [x] D6. **X 预注册帖**（2026-10-09 19:46 UTC 已发）（用文字发，然后**置顶**）：
   ```
   HANDSHAKE-001 pre-registration
   Protocol SHA-256: <PREREGISTRATION.md 的 64 位指纹>
@@ -111,7 +111,7 @@
   DOI: <Zenodo DOI>
   ```
 - [ ] D7. **第二平台**：发同一段文字。
-- [ ] D8. **存档**：把 X 帖子、第二平台帖子、GitHub 页面、Zenodo 页面，分别提交到 archive.ph 和 web.archive.org。web.archive.org 常常存不下 X 的页面，所以以 archive.ph 为主。
+- [x] D8. **存档**（X 帖：archive.ph/XKAfI；web.archive.org 存的是 oEmbed 版本）：把 X 帖子、第二平台帖子、GitHub 页面、Zenodo 页面，分别提交到 archive.ph 和 web.archive.org。web.archive.org 常常存不下 X 的页面，所以以 archive.ph 为主。
 - [ ] D9. 过几个小时运行 `ots upgrade *.ots`，然后把 `.ots` 文件推送到 GitHub。
 - [ ] D10. 所有链接、指纹和 DOI 都记进 `RECORD.md`。
 - [ ] D11. （可选）发 B 站和 YouTube 预告视频。视频里展示预注册链接和指纹，并说明预期结果几乎一定是"无法判断"。

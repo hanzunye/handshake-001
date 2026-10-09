@@ -10,7 +10,7 @@ A pre-registered, single-shot test of whether information can arrive at a quantu
 | | |
 |---|---|
 | Status | not yet run |
-| Pre-registration post | {{link}} |
+| Pre-registration post | https://x.com/DavonGluck/status/2108645176260313365 ([archive](https://archive.ph/XKAfI)) |
 | Zenodo DOI (pre-registration) | [10.5281/zenodo.23269344](https://doi.org/10.5281/zenodo.23269344) |
 | Live stream (10:00–13:30 CEST, 12 Oct 2026) | https://youtube.com/live/Czs_cNhEQR0 |
 | T0 / T1 (UTC) | 2026-10-12T08:00:00Z / 2026-10-12T11:00:00Z (10:00 / 13:00 CEST) |

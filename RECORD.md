@@ -32,7 +32,7 @@
 
 | # | Content | Platform | Post URL | Posted at | archive.ph | web.archive.org | OTS file |
 |---|---|---|---|---|---|---|---|
-| 1 | Pre-registration (pinned) | X | | | | | `PREREGISTRATION.md.ots` |
+| 1 | Pre-registration (pinned) | X | https://x.com/DavonGluck/status/2108645176260313365 | 2026-10-09 19:46:01 UTC | https://archive.ph/XKAfI (hash checked) | https://web.archive.org/web/20261009195954/https://publish.x.com/oembed?url=https:%2F%2Ftwitter.com%2FDavonGluck%2Fstatus%2F2108645176260313365 (oEmbed; x.com itself refused) | `PREREGISTRATION.md.ots` |
 | 1b | Pre-registration | second platform | | | | | |
 | 2 | Postponement (if any) | X | | | | | |
 | 3 | ANU commitment | X | | | | | `public/anu_commitment.txt.ots` |
