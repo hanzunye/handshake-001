@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HANDSHAKE-001 Live Plan</title>
+<style>
+  @page { size: 1920px 1080px; margin: 0; }
+  :root {
+    --ink: #14161a; --muted: #5b6270; --line: #d9dde3; --soft: #f3f5f8;
+    --accent: #1f4fd1; --accent-soft: #e8eefc; --warn: #b4232a; --warn-soft: #fbeaea; --ok: #1d7a46;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #fff; color: var(--ink);
+    font-family: -apple-system, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+    -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .slide { width: 1920px; height: 1080px; padding: 72px 104px 120px; position: relative;
+    overflow: hidden; page-break-after: always; break-after: page; }
+  .slide:last-child { page-break-after: auto; break-after: auto; }
+  .kicker { font-size: 26px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; }
+  h1 { font-size: 64px; line-height: 1.1; margin: 10px 0 30px; letter-spacing: -.01em; }
+  h2 { font-size: 34px; margin: 0 0 14px; }
+  p, li { font-size: 33px; line-height: 1.42; }
+  ul { margin: 0; padding-left: 1.1em; }
+  li { margin: 0 0 14px; }
+  code, .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+  code { font-size: .86em; background: var(--soft); padding: 2px 10px; border-radius: 8px; }
+  .muted { color: var(--muted); }
+  .footer { position: absolute; left: 104px; right: 104px; bottom: 44px; display: flex; justify-content: space-between;
+    font-size: 22px; color: var(--muted); border-top: 2px solid var(--line); padding-top: 16px; }
+  .tz { color: var(--accent); font-weight: 700; }
+
+  /* title slide */
+  .title h1 { font-size: 104px; margin: 18px 0 12px; }
+  .subtitle { font-size: 40px; color: var(--muted); margin: 0 0 54px; }
+  .bigtimes { display: flex; gap: 40px; margin-bottom: 52px; }
+  .tbox { flex: 1; border: 3px solid var(--accent); border-radius: 22px; padding: 26px 36px; background: var(--accent-soft); }
+  .tbox .lab { font-size: 28px; font-weight: 700; color: var(--accent); letter-spacing: .08em; }
+  .tbox .big { font-size: 92px; font-weight: 800; line-height: 1.05; }
+  .tbox .sub { font-size: 28px; color: var(--muted); }
+  .meta { font-size: 27px; line-height: 1.6; }
+  .meta b { display: inline-block; min-width: 330px; }
+  .hash { font-size: 25px; letter-spacing: .01em; }
+
+  /* schedule table */
+  table { width: 100%; border-collapse: collapse; }
+  .sched td { border-bottom: 2px solid var(--line); padding: 11px 16px; vertical-align: middle; font-size: 29px; line-height: 1.25; white-space: nowrap; }
+  .sched tr:first-child td { border-top: 2px solid var(--line); }
+  .sched .t { width: 230px; font-size: 34px; font-weight: 800; white-space: nowrap; }
+  .sched .u { width: 130px; color: var(--muted); font-size: 24px; white-space: nowrap; }
+  .sched .cmd { width: 560px; }
+  .sched .cmd code { font-size: 24px; white-space: nowrap; }
+  .sched tr.key td { background: var(--accent-soft); }
+  .sched tr.key .t { color: var(--accent); }
+  .sched th { text-align: left; font-size: 22px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); padding: 0 18px 10px; }
+
+  /* deadlines */
+  .dl td { padding: 15px 22px; border-bottom: 2px solid var(--line); font-size: 31px; line-height: 1.32; vertical-align: middle; }
+  .dl tr:first-child td { border-top: 2px solid var(--line); }
+  .dl .t { width: 300px; font-weight: 800; font-size: 38px; white-space: nowrap; }
+  .dl .t small { display: block; font-size: 22px; color: var(--muted); font-weight: 400; }
+  .dl tr.hard .t { color: var(--warn); }
+  .note { margin-top: 30px; border-left: 8px solid var(--accent); background: var(--soft); padding: 18px 28px; border-radius: 0 14px 14px 0; font-size: 29px; line-height: 1.42; }
+
+  .cols { display: flex; gap: 70px; }
+  .cols > div { flex: 1; }
+  .card { border: 2px solid var(--line); border-radius: 20px; padding: 28px 34px; }
+  .card.see { border-color: #b9dcc7; background: #f2faf5; }
+  .card.hide { border-color: #f0c7c9; background: var(--warn-soft); }
+  .card h2 { margin-bottom: 18px; }
+  .card li { font-size: 30px; }
+  .url { font-size: 27px; word-break: break-all; }
+  .odds { display: flex; gap: 30px; margin-top: 26px; }
+  .odd { flex: 1; background: var(--soft); border-radius: 18px; padding: 20px 26px; }
+  .odd .n { font-size: 46px; font-weight: 800; }
+  .odd .l { font-size: 25px; color: var(--muted); }
+</style>
+</head>
+<body>
+
+<!-- 1. Title -->
+<section class="slide title">
+  <div class="kicker">Live session plan</div>
+  <h1>HANDSHAKE-001</h1>
+  <p class="subtitle">A pre-registered single-shot test for information arriving from the future</p>
+  <div class="bigtimes">
+    <div class="tbox"><div class="lab">T0 · THE DRAWS</div><div class="big">10:00</div><div class="sub">Monday 12 October 2026 · German time (CEST) · 08:00 UTC</div></div>
+    <div class="tbox"><div class="lab">T1 · THE TARGET</div><div class="big">13:00:00</div><div class="sub">Monday 12 October 2026 · German time (CEST) · 11:00 UTC</div></div>
+  </div>
+  <div class="meta">
+    <div><b>Author</b>Han Yunze · X <span class="mono">@DavonGluck</span></div>
+    <div><b>Pre-registration post</b><span class="mono">x.com/DavonGluck/status/2108645176260313365</span></div>
+    <div><b>Code and data</b><span class="mono">github.com/hanzunye/handshake-001</span> · DOI <span class="mono">10.5281/zenodo.23269344</span></div>
+    <div><b>Protocol SHA-256</b><span class="mono hash">f4c83cd7d93c9c90e2a3439ebfd833d271f8cde8678ec000b51cdd96db01fb06</span></div>
+    <div><b>Code SHA-256</b><span class="mono hash">21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17</span></div>
+  </div>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>1 / 6</span></div>
+</section>
+
+<!-- 2. The idea -->
+<section class="slide">
+  <div class="kicker">What happens today</div>
+  <h1>The experiment in one minute</h1>
+  <ul>
+    <li><b>10:00</b> Two quantum random numbers are drawn, 24 bits each (6 hex characters): one from the <b>ANU</b> quantum random number service, one from <b>24 qubits on an IBM Quantum</b> processor.</li>
+    <li>Each number is sealed with a secret 256-bit salt and two hashes (SHA-256 and SHA3-512). <b>Only the hashes are posted on X.</b> The numbers stay hidden.</li>
+    <li><b>13:00:00</b> The <b>NIST Randomness Beacon</b> publishes a new random value that nobody can predict. The target is its first 6 hex characters.</li>
+    <li>A draw is a <b>HIT</b> only if its 6 characters equal the target exactly. After the target is public, the numbers and salts are revealed and anyone can check them.</li>
+  </ul>
+  <div class="odds">
+    <div class="odd"><div class="n">1 in 16,777,216</div><div class="l">chance of a hit, per draw</div></div>
+    <div class="odd"><div class="n">≈ 1 in 8,388,608</div><div class="l">chance that at least one draw hits</div></div>
+    <div class="odd"><div class="n">2<sup>−48</sup> ≈ 3.6 × 10<sup>−15</sup></div><div class="l">chance that both draws hit</div></div>
+  </div>
+  <p class="muted" style="margin-top:26px">Expected outcome: <b>INCONCLUSIVE</b> (no hit). A single miss refutes nothing; a hit would be treated first as a possible error.</p>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>2 / 6</span></div>
+</section>
+
+<!-- 3. Schedule -->
+<section class="slide">
+  <div class="kicker">Monday 12 October 2026</div>
+  <h1 style="margin-bottom:22px">Today's schedule</h1>
+  <table class="sched">
+    <tr><th>CEST</th><th>UTC</th><th>Step</th><th>Command on screen</th></tr>
+    <tr><td class="t">09:25</td><td class="u">07:25</td><td>Stream starts; pre-registration and file hashes shown</td><td class="cmd"><code>shasum -a 256 …</code></td></tr>
+    <tr><td class="t">09:45</td><td class="u">07:45</td><td>Preflight self-check (clock, NIST, ANU, IBM, code)</td><td class="cmd"><code>python3 handshake.py preflight</code></td></tr>
+    <tr class="key"><td class="t">10:00</td><td class="u">08:00</td><td><b>T0:</b> ANU number drawn and sealed; IBM job sent</td><td class="cmd"><code>python3 handshake.py start</code></td></tr>
+    <tr><td class="t">~10:01</td><td class="u"></td><td>ANU commitment posted on X</td><td class="cmd muted">X post</td></tr>
+    <tr><td class="t">~10:02</td><td class="u"></td><td>IBM number sealed; IBM commitment posted on X</td><td class="cmd"><code>python3 handshake.py commit-ibm</code></td></tr>
+    <tr><td class="t">10:30–12:50</td><td class="u"></td><td>Waiting; both numbers stay hidden</td><td class="cmd muted">—</td></tr>
+    <tr class="key"><td class="t">13:00:00</td><td class="u">11:00:00</td><td><b>T1:</b> the NIST pulse of this second is the target</td><td class="cmd muted">beacon.nist.gov</td></tr>
+    <tr><td class="t">13:01</td><td class="u">11:01</td><td>Target fetched and posted on X</td><td class="cmd"><code>python3 handshake.py fetch-target</code></td></tr>
+    <tr><td class="t">~13:05</td><td class="u"></td><td>Reveal: numbers, salts and result published</td><td class="cmd"><code>python3 handshake.py reveal</code></td></tr>
+    <tr><td class="t">~13:10</td><td class="u"></td><td>Check against the hashes on X; end of stream</td><td class="cmd"><code>python3 handshake.py verify …</code></td></tr>
+  </table>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>3 / 6</span></div>
+</section>
+
+<!-- 4. Deadlines -->
+<section class="slide">
+  <div class="kicker">Fixed in advance · enforced by the code</div>
+  <h1 style="margin-bottom:22px">Rules and deadlines</h1>
+  <table class="dl">
+    <tr><td class="t">09:30–09:58<small>07:30–07:58 UTC</small></td><td>Preflight window: a passing self-check must run entirely inside it</td></tr>
+    <tr class="hard"><td class="t">09:59–10:10<small>07:59–08:10 UTC</small></td><td>The only window for <code>start</code>, which runs <b>only once</b> (ANU: up to 10 attempts)</td></tr>
+    <tr class="hard"><td class="t">12:30<small>10:30 UTC</small></td><td>The IBM job must have <b>finished</b> (IBM server time; created by 12:25)</td></tr>
+    <tr class="hard"><td class="t">12:50<small>10:50 UTC</small></td><td>Both commitments must be <b>posted on X</b>; a late post voids that draw</td></tr>
+    <tr><td class="t">13:01<small>11:01 UTC</small></td><td>Target fetched from this minute on; if NIST is late we wait, it is <b>never replaced</b></td></tr>
+  </table>
+  <div class="note">If one draw fails, it is void and the other continues alone. If the attempt cannot start (for example a failed preflight or a power cut), it is postponed by exactly <b>24 hours</b>, announced on X before 10:10 (at most 7 times). Every attempt, void and postponement is published.</div>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>4 / 6</span></div>
+</section>
+
+<!-- 5. Target -->
+<section class="slide">
+  <div class="kicker">T1 · 13:00:00 CEST · 11:00:00 UTC</div>
+  <h1>The target</h1>
+  <ul>
+    <li>The target pulse is <b>the first NIST Randomness Beacon 2.0 pulse stamped at or after 13:00:00 CEST</b> (11:00:00 UTC) on 12 October 2026.</li>
+    <li>The target is the <b>first 6 characters of its <code>outputValue</code></b>, in uppercase. NIST is the only source; there is no backup source.</li>
+    <li>Anyone can open the same pulse, now or years from now (this page shows "404 not found" until 13:00):</li>
+  </ul>
+  <p class="mono url" style="margin:6px 0 34px 1.1em; color:var(--accent)">https://beacon.nist.gov/beacon/2.0/pulse/time/1791802800000</p>
+  <h2>Secondary analysis (separate, not live-streamed)</h2>
+  <ul>
+    <li>Three later pulses are compared with the values already made public: <b>N2 ≈ 14:00 today</b>, <b>N3 ≈ Tue 13 Oct 13:00</b>, <b>N4 ≈ Mon 19 Oct 13:00</b> (CEST).</li>
+    <li>They ask whether the beacon itself can be influenced. They never change the primary result.</li>
+  </ul>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>5 / 6</span></div>
+</section>
+
+<!-- 6. Transparency and verification -->
+<section class="slide">
+  <div class="kicker">Transparency</div>
+  <h1>What you will see, and how to check it</h1>
+  <div class="cols">
+    <div class="card see">
+      <h2>On screen</h2>
+      <ul>
+        <li>Every command and its full output</li>
+        <li>The commitment hashes and the X posts with their times</li>
+        <li>The NIST pulse on NIST's own website</li>
+        <li>At the reveal: both numbers, both salts, the result</li>
+      </ul>
+    </div>
+    <div class="card hide">
+      <h2>Not shown before the reveal</h2>
+      <ul>
+        <li>The two numbers and their salts: never displayed, stored only in private files and backed up offline</li>
+        <li>API keys and the IBM job result page are never shown</li>
+      </ul>
+    </div>
+  </div>
+  <h2 style="margin-top:40px">Check it yourself</h2>
+  <ul>
+    <li>Instructions: <span class="mono">VERIFY.md</span> in <span class="mono">github.com/hanzunye/handshake-001</span></li>
+    <li>One command recomputes every hash, fetches the target from NIST and recomputes the result:<br><code>python3 handshake.py verify --anu-sha256 … --ibm-sha3-512 …</code></li>
+    <li>Use the hashes <b>as posted on X</b>, not the copies in the repository.</li>
+  </ul>
+  <div class="footer"><span>HANDSHAKE-001 · All times are German time (<span class="tz">CEST = UTC+2</span>)</span><span>6 / 6</span></div>
+</section>
+
+<script>
+  // Preview helper: open LIVE_PLAN.html#3 to show only slide 3 on screen (printing always shows all slides).
+  const n = parseInt(location.hash.slice(1), 10);
+  if (n) document.querySelectorAll('.slide').forEach((s, i) => { if (i + 1 !== n) s.style.display = 'none'; });
+</script>
+</body>
+</html>

@@ -14,7 +14,7 @@
 
 ## 2. 开播前（09:00–09:25）
 
-- 接上电源，插好 U 盘。
+- 接上电源，插好 U 盘（名字是 `my usb`，里面已建好 `HANDSHAKE-001` 文件夹）。
 - **终端 1（不出镜）**：`caffeinate -dimsu`，整场都不要关。
 - **终端 2（出镜）**：
   ```
@@ -34,9 +34,9 @@
 | **09:45** | 终端 | `python3 handshake.py preflight`，要看到 `PREFLIGHT PASSED`。<br>没通过：看是哪一项 FAIL，修好再跑；最后一次最晚 09:55 开始 |
 | **10:00** | 终端 | `python3 handshake.py start`。它会自动重试，**中途不要打断** |
 | 紧接着 | 浏览器 | 复制屏幕上的 **ANU 承诺帖**文字，发到 X 和第二平台，刷新页面让发帖时间出现在画面里，然后存档 |
-| 紧接着 | 终端 | `cp secret/anu.json /Volumes/<U盘名>/`（只复制，不打开） |
+| 紧接着 | 终端 | `cp secret/anu.json "/Volumes/my usb/HANDSHAKE-001/" && cmp secret/anu.json "/Volumes/my usb/HANDSHAKE-001/anu.json" && echo "ANU backup OK"`<br>（只复制、不打开；`cmp` 只比对内容是否一致，不会显示内容） |
 | 紧接着 | 终端 | `python3 handshake.py commit-ibm`，等它打印出 IBM 承诺帖（通常 1 分钟以内） |
-| 紧接着 | 浏览器 | 发 **IBM 承诺帖**（里面带 JOB 编号），存档；然后在终端运行 `cp secret/ibm.json /Volumes/<U盘名>/` |
+| 紧接着 | 浏览器 | 发 **IBM 承诺帖**（里面带 JOB 编号），存档；然后在终端运行 `cp secret/ibm.json "/Volumes/my usb/HANDSHAKE-001/" && cmp secret/ibm.json "/Volumes/my usb/HANDSHAKE-001/ibm.json" && echo "IBM backup OK"` |
 | 两条承诺帖都发出后 | 终端 | `git add public && git commit -m "T0 commitments" && git push` |
 | 10:30–12:50 | 等待 | 保持画面，偶尔运行 `ls -l public/`、刷新 NIST 页面。<br>**趁这段时间**把下面 13:05 要用的 verify 命令准备好：哈希从两条 X 帖子里复制 |
 | **12:50** | 浏览器 | 打开 https://beacon.nist.gov/beacon/2.0/pulse/time/1791802800000 ，现在显示 404 是正常的 |

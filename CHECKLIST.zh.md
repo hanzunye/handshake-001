@@ -71,7 +71,7 @@
 - [ ] A5. **第二个公开平台**：Bluesky 或 Mastodon，都开放、容易被网页存档，任选一个；如果想让中文读者看到，再加上微博。X 上发的每一条，这里都同步发一条。
 - [x] A6. **GitHub**：注册账号，或者用现有的。
 - [ ] A7. **Zenodo**：在 zenodo.org 用 GitHub 账号登录 → 个人设置里的 GitHub 页面 → 打开 `handshake-001` 仓库的开关。之后每在 GitHub 发布一个 Release，Zenodo 都会自动存档并分配 DOI。
-- [ ] A8. **U 盘**：格式化成 exFAT。另外准备一份加密网盘备份。
+- [x] A8. **U 盘**：`my usb`（NTFS，靠 iBoysoft NTFS 驱动才能写入；10-09 写入测试通过，已建好 `HANDSHAKE-001` 文件夹）。10-11 再测一次能否写入。另外准备一份加密网盘备份。
 - [ ] A9. **手机热点**：提前测试，确认电脑能连上。
 
 ## B. 测试与定参数
@@ -155,7 +155,7 @@
 - [ ] F3. **T0 前 30 分钟到 T0 前 2 分钟（德国 09:30–09:58）**：运行 `python3 handshake.py preflight`，必须看到 `PREFLIGHT PASSED`。一次自检要连 NIST、ANU、IBM，实测大约 10 秒（10-09 测试），**开始和结束都要在窗口内**，保险起见最后一次最晚 09:55 开始。没通过就修好后再跑一次；到 09:58 还没通过，就按 M2 推迟。
 - [ ] F4. **T0（德国 10:00；窗口为 09:59–10:10）**：运行 `python3 handshake.py start`。如果请求失败，脚本会自动重试，每一路最多 10 次，**不要中途打断**。
 - [ ] F5. 立刻把 **ANU 承诺帖**原样发到 X 和第二平台，刷新页面，让观众看到发帖时间，然后存档。
-- [ ] F6. 备份秘密文件：`cp secret/anu.json /Volumes/<U盘名>/`，再加一份加密网盘。**只复制，不打开。**
+- [ ] F6. 备份秘密文件：`cp secret/anu.json "/Volumes/my usb/HANDSHAKE-001/" && cmp secret/anu.json "/Volumes/my usb/HANDSHAKE-001/anu.json" && echo "ANU backup OK"`，再加一份加密网盘。**只复制，不打开。**
 - [ ] F7. 运行 `caffeinate -i python3 handshake.py commit-ibm`，让它一直等着。
 - [ ] F8. IBM 完成后，把 **IBM 承诺帖**（里面带作业编号）发到 X 和第二平台并存档，然后备份 `secret/ibm.json`。
   - IBM 作业必须在 **T1 前 30 分钟（德国 12:30）**之前完成，承诺帖必须在 **T1 前 10 分钟（德国 12:50）**之前发出。
