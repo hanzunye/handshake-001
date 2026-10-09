@@ -69,7 +69,7 @@
 - [x] A3. YouTube 直播权限
 - [ ] A4. **X 账号**：决定用主账号还是新开一个专门的实验账号。之后所有帖子都必须从**同一个账号**发出。
 - [ ] A5. **第二个公开平台**：Bluesky 或 Mastodon，都开放、容易被网页存档，任选一个；如果想让中文读者看到，再加上微博。X 上发的每一条，这里都同步发一条。
-- [ ] A6. **GitHub**：注册账号，或者用现有的。
+- [x] A6. **GitHub**：注册账号，或者用现有的。
 - [ ] A7. **Zenodo**：在 zenodo.org 用 GitHub 账号登录 → 个人设置里的 GitHub 页面 → 打开 `handshake-001` 仓库的开关。之后每在 GitHub 发布一个 Release，Zenodo 都会自动存档并分配 DOI。
 - [ ] A8. **U 盘**：格式化成 exFAT。另外准备一份加密网盘备份。
 - [ ] A9. **手机热点**：提前测试，确认电脑能连上。
@@ -96,10 +96,10 @@
 
 ## D. 预注册发布：多平台（最晚 10-11，建议 10-10；必须在 T0 之前）
 
-- [ ] D1. 计算并记下：`shasum -a 256 PREREGISTRATION.md handshake.py config.json`
-- [ ] D2. 盖时间戳：`ots stamp PREREGISTRATION.md handshake.py config.json`
-- [ ] D3. **GitHub**：在 `handshake-001` 目录下运行 `git init`，提交后推送到新建的公开仓库。`secret/`、`.venv/`、`rehearsal/` 都不会被推上去。然后发布一个 Release，名字叫 `v1.0-prereg`。
-- [ ] D4. **Zenodo**：发布 Release 后会自动生成一个 DOI，记下来。如果 Zenodo 让你选许可协议，选 CC0 1.0。
+- [x] D1. 计算并记下：`shasum -a 256 PREREGISTRATION.md handshake.py config.json`
+- [x] D2. 盖时间戳：`ots stamp PREREGISTRATION.md handshake.py config.json`
+- [x] D3. **GitHub**（10-09 已推送到 https://github.com/hanzunye/handshake-001 ，Release 还没发）：在 `handshake-001` 目录下运行 `git init`，提交后推送到新建的公开仓库。`secret/`、`.venv/`、`rehearsal/` 都不会被推上去。然后发布一个 Release，名字叫 `v1.0-prereg`。
+- [x] D4. **Zenodo**（DOI 10.5281/zenodo.23269344；还需把作者和许可协议改成 Han, Yunze 和 CC0）：发布 Release 后会自动生成一个 DOI，记下来。如果 Zenodo 让你选许可协议，选 CC0 1.0。
 - [ ] D5. **YouTube**：先预约好直播（见 E2），拿到直播链接。
 - [ ] D6. **X 预注册帖**（用文字发，然后**置顶**）：
   ```

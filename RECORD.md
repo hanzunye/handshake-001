@@ -15,7 +15,7 @@
 | SHA-256 `handshake.py` | `21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17` (frozen 2026-10-09) |
 | SHA-256 `config.json` | `c1b236f4201b87c1c4dc73cd592da9af94952e9943b89b2e1201a877c3c2c056` |
 | GitHub repository | https://github.com/hanzunye/handshake-001 |
-| Zenodo DOI (pre-registration) | |
+| Zenodo DOI (pre-registration) | 10.5281/zenodo.23269344 (release v1.0-prereg, archived 2026-10-09 19:00 UTC; file hashes checked) |
 | YouTube live URL | |
 | Local recording file | |
 
