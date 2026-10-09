@@ -1,0 +1,11 @@
+# Never publish the secret before the reveal
+secret/
+rehearsal/
+__pycache__/
+*.pyc
+
+# local Python environment
+.venv/
+
+# macOS
+.DS_Store
