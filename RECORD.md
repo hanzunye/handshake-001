@@ -16,7 +16,7 @@
 | SHA-256 `config.json` | `c1b236f4201b87c1c4dc73cd592da9af94952e9943b89b2e1201a877c3c2c056` |
 | GitHub repository | https://github.com/hanzunye/handshake-001 |
 | Zenodo DOI (pre-registration) | 10.5281/zenodo.23269344 (release v1.0-prereg, archived 2026-10-09 19:00 UTC; file hashes checked) |
-| YouTube live URL | |
+| YouTube live URL | https://youtube.com/live/Czs_cNhEQR0 (scheduled 2026-10-12 07:25 UTC) |
 | Local recording file | |
 
 ## 2. IBM queue-time trials (before the experiment)
@@ -96,4 +96,5 @@
 
 | Time | What happened | What was done |
 |---|---|---|
+| 2026-10-09 19:00 UTC | `PREREGISTRATION.md` states "Published 2026-10-10", but GitHub, Zenodo and OpenTimestamps record its publication on 2026-10-09 (one day earlier). | Left unchanged: the document was already hashed, stamped and archived. The X post, Zenodo and OTS times are the evidence; an earlier real publication only strengthens the before-T0 claim. |
 | | | |
