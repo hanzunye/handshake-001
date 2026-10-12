@@ -1,0 +1,39 @@
+{
+  "experiment_id": "HANDSHAKE-001",
+  "draw": "IBM",
+  "committed_at_utc": "2026-10-12T08:03:59Z",
+  "number_hex": "94FEC6",
+  "evidence_sha256": "38e224abf435e49e41cc98b170494c859badc76b53a4d3a9f93921c1e589717e",
+  "salt_hex": "6a26f098024eb3c483657f634aaadd772b8adb1a90e19af5ca1b6491ceaff0e7",
+  "canonical_message": "HANDSHAKE-001|DRAW=IBM|NUMBER=94FEC6|EVIDENCE=38e224abf435e49e41cc98b170494c859badc76b53a4d3a9f93921c1e589717e|SALT=6a26f098024eb3c483657f634aaadd772b8adb1a90e19af5ca1b6491ceaff0e7",
+  "draw_info": {
+    "source": "IBM Quantum",
+    "mode": "real",
+    "job_id": "db6972o4qg6s73c4e6k0",
+    "backend": "ibm_kingston",
+    "attempts": [
+      {
+        "n": 1,
+        "tag": "HANDSHAKE-001-attempt-1",
+        "state": "ok",
+        "begun_utc": "2026-10-12T08:00:03Z",
+        "detail": "submitted db6972o4qg6s73c4e6k0 on ibm_kingston",
+        "ended_utc": "2026-10-12T08:00:12Z",
+        "job_id": "db6972o4qg6s73c4e6k0",
+        "backend": "ibm_kingston",
+        "final_status": "DONE"
+      }
+    ],
+    "bitstring": "100101001111111011000110",
+    "timestamps": {
+      "created": "2026-10-12T08:00:11.965826Z",
+      "finished": "2026-10-12T08:00:29.743941Z",
+      "running": "2026-10-12T08:00:16.85973Z"
+    },
+    "circuit": "24 qubits, H on each, measure q[i]->c[i]; optimization_level=1; SamplerV2 shots=1",
+    "software": {
+      "qiskit": "2.5.2",
+      "qiskit-ibm-runtime": "0.50.0"
+    }
+  }
+}

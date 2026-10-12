@@ -7,3 +7,5 @@
 {"at_utc":"2026-10-12T08:00:12Z","detail":"submitted db6972o4qg6s73c4e6k0 on ibm_kingston","event":"ibm_submit_end","job_id":"db6972o4qg6s73c4e6k0","n":1,"state":"ok"}
 {"at_utc":"2026-10-12T08:03:59Z","event":"ibm_job_final","job_id":"db6972o4qg6s73c4e6k0","status":"DONE"}
 {"at_utc":"2026-10-12T08:03:59Z","draw":"IBM","event":"commit","sha256":"3207a1de3e8f7ff26a16b188b1de326a98ed7597ecd96a13373cb60ebf13993c","sha3_512":"15af764a75b10bc9cb6a1ad5b8f2b842958137736a65e2912dcb0ea595cfbb4f6c5b0f5968561e9e10175a85b303c97874460ab17b1ab9b9ef5dfba8b7e6d404"}
+{"at_utc":"2026-10-12T11:01:04Z","event":"target","pulse":"2026-10-12T11:00:00.000Z","target_hex":"02B168"}
+{"at_utc":"2026-10-12T11:03:04Z","event":"reveal","hits":[],"result":"INCONCLUSIVE"}

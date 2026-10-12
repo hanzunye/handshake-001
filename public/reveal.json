@@ -1,0 +1,22 @@
+{
+  "experiment_id": "HANDSHAKE-001",
+  "draws": {
+    "IBM": {
+      "number_hex": "94FEC6",
+      "evidence_sha256": "38e224abf435e49e41cc98b170494c859badc76b53a4d3a9f93921c1e589717e",
+      "salt_hex": "6a26f098024eb3c483657f634aaadd772b8adb1a90e19af5ca1b6491ceaff0e7",
+      "canonical_message": "HANDSHAKE-001|DRAW=IBM|NUMBER=94FEC6|EVIDENCE=38e224abf435e49e41cc98b170494c859badc76b53a4d3a9f93921c1e589717e|SALT=6a26f098024eb3c483657f634aaadd772b8adb1a90e19af5ca1b6491ceaff0e7",
+      "sha256": "3207a1de3e8f7ff26a16b188b1de326a98ed7597ecd96a13373cb60ebf13993c",
+      "sha3_512": "15af764a75b10bc9cb6a1ad5b8f2b842958137736a65e2912dcb0ea595cfbb4f6c5b0f5968561e9e10175a85b303c97874460ab17b1ab9b9ef5dfba8b7e6d404"
+    }
+  },
+  "unscored_void_draws": {},
+  "void_draws": [
+    "ANU"
+  ],
+  "target_hex": "02B168",
+  "target_pulse": "2026-10-12T11:00:00.000Z",
+  "result": "INCONCLUSIVE",
+  "hits": [],
+  "chance_of_any_hit": 5.960464477539063e-08
+}
