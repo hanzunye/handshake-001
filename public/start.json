@@ -1,0 +1,15 @@
+{
+  "experiment_id": "HANDSHAKE-001",
+  "started_at_utc": "2026-10-12T08:00:01Z",
+  "tool_version": "3.2",
+  "t0_utc": "2026-10-12T08:00:00Z",
+  "t1_utc": "2026-10-12T11:00:00Z",
+  "postponements": 0,
+  "code_sha256": "21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17",
+  "environment": {
+    "python": "3.11.4",
+    "executable": "/Users/han/Documents/fullstack/CISACOP/handshake-001/.venv/bin/python3",
+    "packages_sha256": "39c600a2d3eb2f11a82b52d660ce2513aa0880c934986129bf53b5fd115f89e6",
+    "n_packages": 48
+  }
+}

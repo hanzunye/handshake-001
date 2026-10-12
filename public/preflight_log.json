@@ -1,0 +1,168 @@
+[
+  {
+    "started_utc": "2026-10-12T07:46:00Z",
+    "finished_utc": "2026-10-12T07:46:01Z",
+    "t0_utc": "2026-10-12T08:00:00Z",
+    "pass": false,
+    "environment": {
+      "python": "3.11.4",
+      "executable": "/Library/Frameworks/Python.framework/Versions/3.11/bin/python3",
+      "packages_sha256": "bb872eae7a54f4e714134533b51b1a95d5f3f78a2f5ddd0e583623f56ce896bd",
+      "n_packages": 219
+    },
+    "checks": [
+      {
+        "check": "start not yet run",
+        "ok": true,
+        "required": true,
+        "detail": "public/start.json absent"
+      },
+      {
+        "check": "no stale secrets",
+        "ok": true,
+        "required": true,
+        "detail": "secret/ holds no draw"
+      },
+      {
+        "check": "code matches pre-registration",
+        "ok": true,
+        "required": true,
+        "detail": "registered 21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17, actual 21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17"
+      },
+      {
+        "check": "no PYTHONPATH override",
+        "ok": true,
+        "required": true,
+        "detail": "PYTHONPATH=''"
+      },
+      {
+        "check": "computer clock",
+        "ok": true,
+        "required": true,
+        "detail": "offset +1s vs NIST server time"
+      },
+      {
+        "check": "NIST beacon publishing",
+        "ok": true,
+        "required": true,
+        "detail": "latest pulse 2026-10-12T07:45:00Z (must be within 3 min)"
+      },
+      {
+        "check": "ANU key and service",
+        "ok": true,
+        "required": true,
+        "detail": "HTTP 200 (1 request used; number discarded unseen)"
+      },
+      {
+        "check": "IBM connection and QPU",
+        "ok": false,
+        "required": true,
+        "detail": "IBM toolkit missing: pip3 install -r requirements.txt"
+      },
+      {
+        "check": "OpenTimestamps CLI",
+        "ok": false,
+        "required": false,
+        "detail": "ots on PATH"
+      },
+      {
+        "check": "preflight window",
+        "ok": true,
+        "required": true,
+        "detail": "ran 2026-10-12T07:46:00Z to 2026-10-12T07:46:01Z; window 2026-10-12T07:30:00Z to 2026-10-12T07:58:00Z"
+      }
+    ]
+  },
+  {
+    "started_utc": "2026-10-12T07:47:05Z",
+    "finished_utc": "2026-10-12T07:47:15Z",
+    "t0_utc": "2026-10-12T08:00:00Z",
+    "pass": true,
+    "environment": {
+      "python": "3.11.4",
+      "executable": "/Users/han/Documents/fullstack/CISACOP/handshake-001/.venv/bin/python3",
+      "packages_sha256": "39c600a2d3eb2f11a82b52d660ce2513aa0880c934986129bf53b5fd115f89e6",
+      "n_packages": 48
+    },
+    "checks": [
+      {
+        "check": "start not yet run",
+        "ok": true,
+        "required": true,
+        "detail": "public/start.json absent"
+      },
+      {
+        "check": "no stale secrets",
+        "ok": true,
+        "required": true,
+        "detail": "secret/ holds no draw"
+      },
+      {
+        "check": "code matches pre-registration",
+        "ok": true,
+        "required": true,
+        "detail": "registered 21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17, actual 21352f760902d51c952bfa12c0fccea06ad3434d246e43decaf6d2ae89c38c17"
+      },
+      {
+        "check": "no PYTHONPATH override",
+        "ok": true,
+        "required": true,
+        "detail": "PYTHONPATH=''"
+      },
+      {
+        "check": "computer clock",
+        "ok": true,
+        "required": true,
+        "detail": "offset +1s vs NIST server time"
+      },
+      {
+        "check": "NIST beacon publishing",
+        "ok": true,
+        "required": true,
+        "detail": "latest pulse 2026-10-12T07:46:00Z (must be within 3 min)"
+      },
+      {
+        "check": "ANU key and service",
+        "ok": true,
+        "required": true,
+        "detail": "HTTP 200 (1 request used; number discarded unseen)"
+      },
+      {
+        "check": "IBM connection and QPU",
+        "ok": true,
+        "required": true,
+        "detail": "least busy: ibm_fez, pending jobs 4"
+      },
+      {
+        "check": "IBM quota",
+        "ok": true,
+        "required": true,
+        "detail": "596 s remaining"
+      },
+      {
+        "check": "qiskit version",
+        "ok": true,
+        "required": true,
+        "detail": "installed 2.5.2, pinned 2.5.2"
+      },
+      {
+        "check": "qiskit-ibm-runtime version",
+        "ok": true,
+        "required": true,
+        "detail": "installed 0.50.0, pinned 0.50.0"
+      },
+      {
+        "check": "OpenTimestamps CLI",
+        "ok": true,
+        "required": false,
+        "detail": "ots on PATH"
+      },
+      {
+        "check": "preflight window",
+        "ok": true,
+        "required": true,
+        "detail": "ran 2026-10-12T07:47:05Z to 2026-10-12T07:47:15Z; window 2026-10-12T07:30:00Z to 2026-10-12T07:58:00Z"
+      }
+    ]
+  }
+]

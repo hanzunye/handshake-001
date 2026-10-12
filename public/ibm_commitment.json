@@ -1,0 +1,29 @@
+{
+  "experiment_id": "HANDSHAKE-001",
+  "draw": "IBM",
+  "committed_at_utc": "2026-10-12T08:03:59Z",
+  "t1_utc": "2026-10-12T11:00:00Z",
+  "sha256": "3207a1de3e8f7ff26a16b188b1de326a98ed7597ecd96a13373cb60ebf13993c",
+  "sha3_512": "15af764a75b10bc9cb6a1ad5b8f2b842958137736a65e2912dcb0ea595cfbb4f6c5b0f5968561e9e10175a85b303c97874460ab17b1ab9b9ef5dfba8b7e6d404",
+  "job_id": "db6972o4qg6s73c4e6k0",
+  "backend": "ibm_kingston",
+  "ibm_timestamps": {
+    "created": "2026-10-12T08:00:11.965826Z",
+    "finished": "2026-10-12T08:00:29.743941Z",
+    "running": "2026-10-12T08:00:16.85973Z"
+  },
+  "ibm_attempts": [
+    {
+      "n": 1,
+      "tag": "HANDSHAKE-001-attempt-1",
+      "state": "ok",
+      "begun_utc": "2026-10-12T08:00:03Z",
+      "detail": "submitted db6972o4qg6s73c4e6k0 on ibm_kingston",
+      "ended_utc": "2026-10-12T08:00:12Z",
+      "job_id": "db6972o4qg6s73c4e6k0",
+      "backend": "ibm_kingston",
+      "final_status": "DONE"
+    }
+  ],
+  "canonical_format": "HANDSHAKE-001|DRAW=IBM|NUMBER=<6 uppercase hex>|EVIDENCE=<64 lowercase hex>|SALT=<64 lowercase hex>"
+}

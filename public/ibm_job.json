@@ -1,0 +1,22 @@
+{
+  "mode": "real",
+  "attempts": [
+    {
+      "n": 1,
+      "tag": "HANDSHAKE-001-attempt-1",
+      "state": "ok",
+      "begun_utc": "2026-10-12T08:00:03Z",
+      "detail": "submitted db6972o4qg6s73c4e6k0 on ibm_kingston",
+      "ended_utc": "2026-10-12T08:00:12Z",
+      "job_id": "db6972o4qg6s73c4e6k0",
+      "backend": "ibm_kingston",
+      "final_status": "DONE"
+    }
+  ],
+  "must_be_created_by_utc": "2026-10-12T10:25:00Z",
+  "must_finish_by_utc": "2026-10-12T10:30:00Z",
+  "job_id": "db6972o4qg6s73c4e6k0",
+  "backend": "ibm_kingston",
+  "submitted_at_utc": "2026-10-12T08:00:03Z",
+  "last_outcome": "ok"
+}

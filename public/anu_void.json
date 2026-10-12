@@ -1,0 +1,13 @@
+{
+  "draw": "ANU",
+  "void_at_utc": "2026-10-12T08:00:03Z",
+  "reason": "ANU draw failed: no usable ANU number (ambiguous) after 1 attempt(s)",
+  "attempts": [
+    {
+      "n": 1,
+      "at_utc": "2026-10-12T08:00:01Z",
+      "state": "ambiguous",
+      "detail": "HTTP 200 with malformed content (not shown)"
+    }
+  ]
+}
